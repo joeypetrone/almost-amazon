@@ -3,6 +3,7 @@ import bookData from '../helpers/data/bookData.js';
 import cart from './cart.js';
 
 
+
 const makeStore = () => {
     const book = bookData.getBook();
     let domString = '';
@@ -14,7 +15,8 @@ const makeStore = () => {
 
 
 const addToCartEvent = () => {
-    cart.cartToDom();
+    const book = bookData.getBook();
+    cart.addToCart(book);
 }; 
 
 
